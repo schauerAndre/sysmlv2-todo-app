@@ -1,0 +1,83 @@
+{
+  "name": "sysmlv2-todo-digital-thread",
+  "displayName": "SysML v2 To-Do Digital Thread",
+  "description": "Demo VS Code extension consuming a SysML v2-derived to-do model.",
+  "version": "0.1.0",
+  "publisher": "andre-schauer-demo",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onView:todoDigitalThread",
+    "onView:modelExplorer"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "todoDigitalThreadPanel",
+          "title": "To-Do List App",
+          "icon": "$(checklist)"
+        }
+      ]
+    },
+    "views": {
+      "todoDigitalThreadPanel": [
+        {
+          "id": "todoDigitalThread",
+          "name": "To-Do List App",
+          "type": "webview"
+        }
+      ],
+      "explorer": [
+        {
+          "id": "modelExplorer",
+          "name": "Model Explorer"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "todoDigitalThread.refresh",
+        "title": "Refresh To-Do Digital Thread",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "modelExplorer.refresh",
+        "title": "Refresh Model Explorer",
+        "icon": "$(refresh)"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "todoDigitalThread.refresh",
+          "when": "view == todoDigitalThread",
+          "group": "navigation"
+        },
+        {
+          "command": "modelExplorer.refresh",
+          "when": "view == modelExplorer",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.85.0",
+    "playwright": "^1.62.1",
+    "typescript": "^5.4.0"
+  },
+  "dependencies": {
+    "@vscode/codicons": "^0.0.46-24"
+  }
+}

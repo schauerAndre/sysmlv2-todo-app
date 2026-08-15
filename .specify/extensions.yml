@@ -1,0 +1,32 @@
+extensions:
+  - id: "sysml-sync"
+    name: "SysML Spec Sync"
+    description: >
+      Keeps spec/*.sysml (this project's own SysML v2 tool specification --
+      use cases, requirements, traceability, architecture, test cases) in
+      sync with the artifacts spec-kit generates under specs/<feature>/.
+      Without this, features planned through spec-kit would exist outside
+      the SysML model that's supposed to be this repo's single source of
+      truth.
+
+hooks:
+  after_specify:
+    - extension: "sysml-sync"
+      command: "speckit.sync-sysml-spec"
+      description: "Add new use cases/requirements from spec.md into spec/01-use-cases.sysml, spec/02-requirements.sysml, and spec/04-traceability.sysml."
+      optional: false
+      enabled: true
+
+  after_plan:
+    - extension: "sysml-sync"
+      command: "speckit.sync-sysml-plan"
+      description: "Reflect plan.md's requirement satisfaction and any new architectural parts into spec/03-architecture.sysml (logical), and any new physical dataflow/allocation into spec/06-physical-architecture.sysml."
+      optional: false
+      enabled: true
+
+  after_tasks:
+    - extension: "sysml-sync"
+      command: "speckit.sync-sysml-tasks"
+      description: "Add new verification cases from tasks.md into spec/05-test-cases.sysml and their matching usages in spec/03-architecture.sysml."
+      optional: false
+      enabled: true

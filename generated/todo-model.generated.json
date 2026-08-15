@@ -1,0 +1,407 @@
+{
+  "useCases": [
+    {
+      "id": "UC-01",
+      "name": "CreateTask",
+      "description": "* The user wants to add\n                 * a new task to a list."
+    },
+    {
+      "id": "UC-02",
+      "name": "ViewTasks",
+      "description": "* The user wants to see\n                 * all open and completed tasks."
+    },
+    {
+      "id": "UC-03",
+      "name": "CompleteTask",
+      "description": "* The user wants to mark\n                 * a task as completed."
+    },
+    {
+      "id": "UC-04",
+      "name": "DeleteTask",
+      "description": "* The user wants to remove\n                 * a task permanently."
+    },
+    {
+      "id": "UC-05",
+      "name": "PersistTasks",
+      "description": "* The user expects tasks to\n                 * survive an application restart."
+    },
+    {
+      "id": "UC-06",
+      "name": "BrowseTaskPanel",
+      "description": "* The user wants to browse and filter\n                 * all tasks in a dedicated panel."
+    },
+    {
+      "id": "UC-07",
+      "name": "ViewTaskDetails",
+      "description": "* The user wants to see a task's full details,\n                 * including which list it belongs to."
+    },
+    {
+      "id": "UC-08",
+      "name": "EditTaskFields",
+      "description": "* The user wants to change a task's status\n                 * or priority directly from the panel."
+    },
+    {
+      "id": "UC-09",
+      "name": "BrowseModelTree",
+      "description": "* The user wants to browse the SysML model's\n                 * structure without opening files individually."
+    },
+    {
+      "id": "UC-10",
+      "name": "NavigateToModelSource",
+      "description": "* The user wants to jump from a tree element\n                 * to its declaration in the SysML source."
+    },
+    {
+      "id": "UC-11",
+      "name": "ViewTraceabilityAsTree",
+      "description": "* The user wants to see a requirement's\n                 * derive/verify links as navigable tree children."
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-TODO-001",
+      "name": "CreateTaskRequirement",
+      "text": "The user shall be able to create a new task with a title."
+    },
+    {
+      "id": "REQ-TODO-002",
+      "name": "ViewTasksRequirement",
+      "text": "The system shall display all tasks together with their status."
+    },
+    {
+      "id": "REQ-TODO-003",
+      "name": "CompleteTaskRequirement",
+      "text": "The user shall be able to mark a task as completed."
+    },
+    {
+      "id": "REQ-TODO-004",
+      "name": "DeleteTaskRequirement",
+      "text": "The user shall be able to delete a task."
+    },
+    {
+      "id": "REQ-TODO-005",
+      "name": "PersistTasksRequirement",
+      "text": "The system shall persist tasks between application restarts."
+    },
+    {
+      "id": "REQ-TODO-006",
+      "name": "BrowseTaskPanelRequirement",
+      "text": "The system shall provide a dedicated panel for browsing and filtering tasks by status and free-text search."
+    },
+    {
+      "id": "REQ-TODO-007",
+      "name": "ViewTaskDetailsRequirement",
+      "text": "The system shall show each task's full details, including which TodoList it belongs to, derived from the actual data model relationship -- not requirements/use cases, which are not part of the data model."
+    },
+    {
+      "id": "REQ-TODO-008",
+      "name": "EditTaskFieldsRequirement",
+      "text": "The system shall allow editing a task's status and priority from the panel, persisting changes back to the SysML model."
+    },
+    {
+      "id": "REQ-TODO-009",
+      "name": "BrowseModelTreeRequirement",
+      "text": "The system shall provide a tree view of the model's use cases, requirements, and test cases."
+    },
+    {
+      "id": "REQ-TODO-010",
+      "name": "NavigateToModelSourceRequirement",
+      "text": "The system shall let the user navigate from a tree element to its declaration in the SysML source."
+    },
+    {
+      "id": "REQ-TODO-011",
+      "name": "ViewTraceabilityAsTreeRequirement",
+      "text": "The system shall show a requirement's derive/verify traceability links as tree children."
+    }
+  ],
+  "tasks": [
+    {
+      "id": "TASK-001",
+      "title": "Write LinkedIn article",
+      "description": "Create the first blog post for the SysML v2 To-Do series.",
+      "status": "open",
+      "priority": "high",
+      "listId": "LIST-001"
+    },
+    {
+      "id": "TASK-002",
+      "title": "Build the demo extractor",
+      "description": "Implement the purpose-built SysML v2 to JSON extractor for this example.",
+      "status": "open",
+      "priority": "medium",
+      "listId": "LIST-001"
+    }
+  ],
+  "lists": [
+    {
+      "id": "LIST-001",
+      "name": "Backlog"
+    }
+  ],
+  "testCases": [
+    {
+      "id": "TEST-001",
+      "name": "CreateTaskTest",
+      "description": null,
+      "implementedBy": null
+    },
+    {
+      "id": "TEST-002",
+      "name": "ViewTasksTest",
+      "description": null,
+      "implementedBy": null
+    },
+    {
+      "id": "TEST-003",
+      "name": "CompleteTaskTest",
+      "description": null,
+      "implementedBy": null
+    },
+    {
+      "id": "TEST-004",
+      "name": "DeleteTaskTest",
+      "description": null,
+      "implementedBy": null
+    },
+    {
+      "id": "TEST-005",
+      "name": "PersistTasksTest",
+      "description": null,
+      "implementedBy": null
+    },
+    {
+      "id": "TEST-006",
+      "name": "EditTaskFieldsTest",
+      "description": null,
+      "implementedBy": null
+    },
+    {
+      "id": "TEST-007",
+      "name": "CreateTaskViaPanelTest",
+      "description": null,
+      "implementedBy": null
+    },
+    {
+      "id": "TEST-008",
+      "name": "DeleteTaskViaPanelTest",
+      "description": null,
+      "implementedBy": null
+    },
+    {
+      "id": "TEST-009",
+      "name": "BrowseModelTreeTest",
+      "description": null,
+      "implementedBy": null
+    },
+    {
+      "id": "TEST-010",
+      "name": "NavigateToModelSourceTest",
+      "description": null,
+      "implementedBy": null
+    },
+    {
+      "id": "TEST-011",
+      "name": "ViewTraceabilityAsTreeTest",
+      "description": null,
+      "implementedBy": null
+    },
+    {
+      "id": "TEST-012",
+      "name": "BrowseTaskPanelTest",
+      "description": null,
+      "implementedBy": null
+    },
+    {
+      "id": "TEST-013",
+      "name": "ViewTaskDetailsTest",
+      "description": null,
+      "implementedBy": null
+    }
+  ],
+  "traceability": [
+    {
+      "from": "UC-01",
+      "to": "REQ-TODO-001",
+      "type": "derive"
+    },
+    {
+      "from": "UC-02",
+      "to": "REQ-TODO-002",
+      "type": "derive"
+    },
+    {
+      "from": "UC-03",
+      "to": "REQ-TODO-003",
+      "type": "derive"
+    },
+    {
+      "from": "UC-04",
+      "to": "REQ-TODO-004",
+      "type": "derive"
+    },
+    {
+      "from": "UC-05",
+      "to": "REQ-TODO-005",
+      "type": "derive"
+    },
+    {
+      "from": "UC-06",
+      "to": "REQ-TODO-006",
+      "type": "derive"
+    },
+    {
+      "from": "UC-07",
+      "to": "REQ-TODO-007",
+      "type": "derive"
+    },
+    {
+      "from": "UC-08",
+      "to": "REQ-TODO-008",
+      "type": "derive"
+    },
+    {
+      "from": "UC-09",
+      "to": "REQ-TODO-009",
+      "type": "derive"
+    },
+    {
+      "from": "UC-10",
+      "to": "REQ-TODO-010",
+      "type": "derive"
+    },
+    {
+      "from": "UC-11",
+      "to": "REQ-TODO-011",
+      "type": "derive"
+    },
+    {
+      "from": "REQ-TODO-001",
+      "to": "ARCH-APP",
+      "type": "satisfy"
+    },
+    {
+      "from": "REQ-TODO-002",
+      "to": "ARCH-APP",
+      "type": "satisfy"
+    },
+    {
+      "from": "REQ-TODO-003",
+      "to": "ARCH-APP",
+      "type": "satisfy"
+    },
+    {
+      "from": "REQ-TODO-004",
+      "to": "ARCH-APP",
+      "type": "satisfy"
+    },
+    {
+      "from": "REQ-TODO-005",
+      "to": "ARCH-APP",
+      "type": "satisfy"
+    },
+    {
+      "from": "REQ-TODO-006",
+      "to": "ARCH-APP",
+      "type": "satisfy"
+    },
+    {
+      "from": "REQ-TODO-007",
+      "to": "ARCH-APP",
+      "type": "satisfy"
+    },
+    {
+      "from": "REQ-TODO-008",
+      "to": "ARCH-APP",
+      "type": "satisfy"
+    },
+    {
+      "from": "REQ-TODO-009",
+      "to": "ARCH-APP",
+      "type": "satisfy"
+    },
+    {
+      "from": "REQ-TODO-010",
+      "to": "ARCH-APP",
+      "type": "satisfy"
+    },
+    {
+      "from": "REQ-TODO-011",
+      "to": "ARCH-APP",
+      "type": "satisfy"
+    },
+    {
+      "from": "REQ-TODO-001",
+      "to": "TEST-001",
+      "type": "verify"
+    },
+    {
+      "from": "REQ-TODO-002",
+      "to": "TEST-002",
+      "type": "verify"
+    },
+    {
+      "from": "REQ-TODO-003",
+      "to": "TEST-003",
+      "type": "verify"
+    },
+    {
+      "from": "REQ-TODO-004",
+      "to": "TEST-004",
+      "type": "verify"
+    },
+    {
+      "from": "REQ-TODO-005",
+      "to": "TEST-005",
+      "type": "verify"
+    },
+    {
+      "from": "REQ-TODO-008",
+      "to": "TEST-006",
+      "type": "verify"
+    },
+    {
+      "from": "REQ-TODO-001",
+      "to": "TEST-007",
+      "type": "verify"
+    },
+    {
+      "from": "REQ-TODO-004",
+      "to": "TEST-008",
+      "type": "verify"
+    },
+    {
+      "from": "REQ-TODO-009",
+      "to": "TEST-009",
+      "type": "verify"
+    },
+    {
+      "from": "REQ-TODO-010",
+      "to": "TEST-010",
+      "type": "verify"
+    },
+    {
+      "from": "REQ-TODO-011",
+      "to": "TEST-011",
+      "type": "verify"
+    },
+    {
+      "from": "REQ-TODO-006",
+      "to": "TEST-012",
+      "type": "verify"
+    },
+    {
+      "from": "REQ-TODO-007",
+      "to": "TEST-013",
+      "type": "verify"
+    }
+  ],
+  "metadataTags": [
+    {
+      "tag": "criticalPath",
+      "targetId": "TASK-002"
+    },
+    {
+      "tag": "sprintBacklog",
+      "targetId": "LIST-001"
+    }
+  ]
+}
